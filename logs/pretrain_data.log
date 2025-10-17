@@ -1,0 +1,125 @@
+2025-10-16 18:37:33,918 - INFO - CCLE disease distribution before split:
+2025-10-16 18:37:33,920 - INFO - primary_disease
+Lung Cancer                   208
+Leukemia                       97
+Brain Cancer                   83
+Lymphoma                       78
+Skin Cancer                    70
+Colon/Colorectal Cancer        67
+Ovarian Cancer                 57
+Breast Cancer                  56
+Pancreatic Cancer              51
+Head and Neck Cancer           45
+Gastric Cancer                 42
+Fibroblast                     39
+Bone Cancer                    37
+Bladder Cancer                 36
+Sarcoma                        35
+Endometrial/Uterine Cancer     35
+Bile Duct Cancer               34
+Kidney Cancer                  33
+Esophageal Cancer              32
+Myeloma                        30
+Neuroblastoma                  26
+Liver Cancer                   24
+Rhabdoid                       20
+Cervical Cancer                16
+Thyroid Cancer                 13
+Liposarcoma                    10
+Eye Cancer                      8
+Engineered                      7
+Prostate Cancer                 7
+Gallbladder Cancer              6
+Name: count, dtype: int64
+2025-10-16 18:37:33,936 - INFO - Common tissue types between CCLE and TCGA: ['lung', 'blood', 'central_nervous_system', 'lymphocyte', 'skin', 'colorectal', 'soft_tissue', 'breast', 'ovary', 'pancreas', 'upper_aerodigestive', 'gastric', 'bile_duct', 'kidney', 'uterus', 'urinary_tract', 'esophagus', 'peripheral_nervous_system', 'liver', 'cervix', 'thyroid', 'eye', 'prostate']
+2025-10-16 18:37:33,936 - INFO - CCLE exclusive tissue types: ['bone', 'fibroblast', 'plasma_cell']
+2025-10-16 18:37:33,973 - INFO - Downsampling TCGA tissue type lung: 1100 -> 188
+2025-10-16 18:37:33,979 - INFO - Downsampling TCGA tissue type blood: 173 -> 87
+2025-10-16 18:37:33,983 - INFO - Downsampling TCGA tissue type central_nervous_system: 167 -> 76
+2025-10-16 18:37:33,987 - INFO - Downsampling TCGA tissue type lymphocyte: 166 -> 70
+2025-10-16 18:37:33,993 - INFO - Downsampling TCGA tissue type skin: 469 -> 63
+2025-10-16 18:37:33,998 - INFO - Downsampling TCGA tissue type colorectal: 383 -> 60
+2025-10-16 18:37:34,002 - INFO - Downsampling TCGA tissue type soft_tissue: 262 -> 57
+2025-10-16 18:37:34,011 - INFO - Downsampling TCGA tissue type breast: 1099 -> 51
+2025-10-16 18:37:34,016 - INFO - Downsampling TCGA tissue type ovary: 427 -> 51
+2025-10-16 18:37:34,020 - INFO - Downsampling TCGA tissue type pancreas: 179 -> 46
+2025-10-16 18:37:34,025 - INFO - Downsampling TCGA tissue type upper_aerodigestive: 520 -> 41
+2025-10-16 18:37:34,031 - INFO - Downsampling TCGA tissue type gastric: 414 -> 38
+2025-10-16 18:37:34,041 - INFO - Downsampling TCGA tissue type kidney: 886 -> 33
+2025-10-16 18:37:34,047 - INFO - Downsampling TCGA tissue type uterus: 238 -> 32
+2025-10-16 18:37:34,052 - INFO - Downsampling TCGA tissue type urinary_tract: 407 -> 32
+2025-10-16 18:37:34,057 - INFO - Downsampling TCGA tissue type esophagus: 182 -> 29
+2025-10-16 18:37:34,062 - INFO - Downsampling TCGA tissue type peripheral_nervous_system: 523 -> 24
+2025-10-16 18:37:34,068 - INFO - Downsampling TCGA tissue type liver: 371 -> 22
+2025-10-16 18:37:34,073 - INFO - Downsampling TCGA tissue type cervix: 306 -> 14
+2025-10-16 18:37:34,078 - INFO - Downsampling TCGA tissue type thyroid: 512 -> 12
+2025-10-16 18:37:34,083 - INFO - Downsampling TCGA tissue type eye: 79 -> 7
+2025-10-16 18:37:34,089 - INFO - Downsampling TCGA tissue type prostate: 496 -> 7
+2025-10-16 18:37:34,184 - INFO - CCLE disease distribution in train_ccle_df:
+2025-10-16 18:37:34,185 - INFO - primary_disease
+Lung Cancer                   187
+Leukemia                       87
+Brain Cancer                   75
+Lymphoma                       70
+Skin Cancer                    63
+Colon/Colorectal Cancer        60
+Ovarian Cancer                 51
+Breast Cancer                  50
+Pancreatic Cancer              46
+Head and Neck Cancer           41
+Gastric Cancer                 38
+Fibroblast                     35
+Bone Cancer                    33
+Sarcoma                        32
+Bladder Cancer                 32
+Endometrial/Uterine Cancer     32
+Bile Duct Cancer               31
+Kidney Cancer                  30
+Esophageal Cancer              29
+Myeloma                        27
+Neuroblastoma                  23
+Liver Cancer                   22
+Rhabdoid                       18
+Cervical Cancer                14
+Thyroid Cancer                 12
+Liposarcoma                     9
+Eye Cancer                      7
+Prostate Cancer                 6
+Engineered                      6
+Gallbladder Cancer              5
+Name: count, dtype: int64
+2025-10-16 18:37:34,186 - INFO - TCGA disease distribution in train_xena_df after resampling:
+2025-10-16 18:37:34,188 - INFO - _primary_disease
+lung squamous cell carcinoma             91
+acute myeloid leukemia                   87
+lung adenocarcinoma                      78
+glioblastoma multiforme                  76
+skin cutaneous melanoma                  63
+sarcoma                                  57
+thymoma                                  52
+breast invasive carcinoma                51
+ovarian serous cystadenocarcinoma        51
+pancreatic adenocarcinoma                46
+colon adenocarcinoma                     45
+head & neck squamous cell carcinoma      41
+stomach adenocarcinoma                   38
+cholangiocarcinoma                       36
+bladder urothelial carcinoma             32
+esophageal carcinoma                     29
+kidney clear cell carcinoma              24
+brain lower grade glioma                 24
+uterine corpus endometrioid carcinoma    23
+liver hepatocellular carcinoma           22
+mesothelioma                             19
+diffuse large B-cell lymphoma            18
+rectum adenocarcinoma                    15
+cervical & endocervical cancer           14
+thyroid carcinoma                        12
+uterine carcinosarcoma                    9
+uveal melanoma                            7
+kidney papillary cell carcinoma           7
+prostate adenocarcinoma                   7
+kidney chromophobe                        2
+Name: count, dtype: int64
+2025-10-16 18:37:34,311 - INFO - CCLE train: 1171, test: 133
+2025-10-16 18:37:34,311 - INFO - TCGA train: 1076, test: 119
