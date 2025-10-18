@@ -30,17 +30,24 @@ pip install torch==2.2.2 torch-geometric==2.6.1 numpy==1.26.4 scipy==1.13.1 pand
 ```
 
 # Data
-- **data/TCGA** records training data, test data, and labeling related to the five drugs associated with TCGA.
-- **data/PDTC** records training data, test data, and labeling related to the drugs associated with PDTC.
-- **data/ccle_sample_info.csv** records biological information related to CCLE samples.
-- **data/pretrain_ccle.csv** records gene expression data from unlabeled CCLE samples.
-- **data/pretrain_tcga.csv** records gene expression data from unlabeled TCGA samples.
-- **data/pdtc_uq1000_feature.csv** records gene expression data from unlabeled PDTC samples.
-- **data/GDSC1_fitted_dose_response_25Feb20.csv** and **data/GDSC2_fitted_dose_response_25Feb20.csv** records data on drug use and response in GDSC samples.
-- **data/DrugResponsesAUCModels.txt** records response data for PDTC sample-drug pairs.
-- **data/pdtc_gdsc_drug_mapping.csv** records the drug names associated with PDTC and their SMILES.
-- **data/uq1000_feature.csv** records gene expression data for unlabeled TCGA samples and CCLE samples.
+- **data/TCGA** records training data, test data, and labeling related to the five drugs associated with TCGA.  
+- **data/PDTC** records training data, test data, and labeling related to the drugs associated with PDTC.  
+- **data/ccle_sample_info.csv** records biological information related to CCLE samples.  
+- **data/pretrain_ccle.csv** records gene expression data from unlabeled CCLE samples.  
+- **data/pretrain_tcga.csv** was originally large and has been split into multiple smaller files (each ≤20MB) stored in **data/split_files/** for memory efficiency, named as:  
+  `pretrain_tcga_part_001.csv`, `pretrain_tcga_part_002.csv`, …  
+  > **Note:** Before running the program, please concatenate these split files back into a single file named `pretrain_tcga.csv` and place it in the `data/` directory.  
+  > You can merge them using:  
+  > ```bash
+  > cat data/split_files/pretrain_tcga_part_*.csv > data/pretrain_tcga.csv
+  > ```
+- **data/pdtc_uq1000_feature.csv** records gene expression data from unlabeled PDTC samples.  
+- **data/GDSC1_fitted_dose_response_25Feb20.csv** and **data/GDSC2_fitted_dose_response_25Feb20.csv** record drug use and response data in GDSC samples.  
+- **data/DrugResponsesAUCModels.txt** records response data for PDTC sample-drug pairs.  
+- **data/pdtc_gdsc_drug_mapping.csv** records the drug names associated with PDTC and their SMILES.  
+c
 - **data/xena_sample_info_df.csv** records biological information related to TCGA samples.
+
 
 # Code Structure
 - **tools/model.py** defines the model architectures used in the training process.
